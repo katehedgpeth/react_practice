@@ -1,14 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tsconfigPaths from 'vite-tsconfig-paths'
+// without this, typescript complains that the UserConfigExport interface
+// does not include 'test'
+/// <reference types="vitest" />
 
-// https://vitejs.dev/config https://vitest.dev/config
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+// https://vitejs.dev/config
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
     globals: true,
-    environment: 'happy-dom',
-    setupFiles: '.vitest/setup',
-    include: ['**/test.{ts,tsx}']
+    environment: "happy-dom",
+    setupFiles: ".vitest/setup",
+    include: ["**/*.test.{ts,tsx}"]
   }
-})
+});
