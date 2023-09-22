@@ -16,6 +16,7 @@ const BubbleSort: FC = () => {
       window.clearInterval(state.timeoutId);
       setState((s) => ({ ...s, timeoutId: 0 }));
     }
+    // return () => window.clearTimeout(state.timeoutId);
   }, [state]);
 
   return (

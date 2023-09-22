@@ -54,6 +54,10 @@ const TrafficLight: FC = () => {
     }));
   }, [state.on]);
 
+  useEffect(() => {
+    return () => window.clearTimeout(state.timeout);
+  }, [state.timeout]);
+
   return (
     <div style={{ maxWidth: "250px" }}>
       <div
