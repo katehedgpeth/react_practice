@@ -2,6 +2,7 @@ import TrafficLight from "./TrafficLight/TrafficLight";
 import BubbleSort from "./BubbleSort/BubbleSort";
 import { FC, PropsWithChildren } from "react";
 import DigitalClock from "./DigitalClock/DigitalClock";
+import ProgressBars from "./ProgressBars/ProgressBars";
 
 const Component: FC<PropsWithChildren> = ({ children }) => (
   <div style={{ margin: "100px 50px" }}>{children}</div>
@@ -10,6 +11,9 @@ const Component: FC<PropsWithChildren> = ({ children }) => (
 function App() {
   return (
     <div>
+      <Component>
+        <ProgressBars />
+      </Component>
       <Component>
         <DigitalClock />
       </Component>
