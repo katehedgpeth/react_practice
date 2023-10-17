@@ -1,0 +1,138 @@
+
+.Selected {
+  flex: 1 0 33%;
+}
+
+.Selected__name {
+/*  
+check mark
+Unicode:  U+FE0F, UTF-8: E2 9C 94 EF B8 8F
+✔︎
+HEAVY CHECK MARK
+Unicode:  U+FE0E, UTF-8: E2 9C 94 EF B8 8E
+*/
+  list-style-position: inside;
+}
+
+.Selected__name::before {
+  content: "✔︎";
+  color: rgba(0, 0, 0, 0.25);
+  margin-right: .25rem;
+}
+
+.Selected__none {
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+
+.Selected__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.List {
+  display: grid;
+  flex: 0 1 66%;
+  grid-auto-rows: 60px;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  text-wrap: wrap;
+}
+
+.List__container {
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+  margin: 16px;
+}
+
+.Item {
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
+  color: white;
+  cursor: pointer;
+  line-height: 60px;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.Item__checkbox {
+  height: 0px;
+  visibility: hidden;
+  width: 0px;
+}
+
+.Item__label {
+  cursor: inherit;
+  display: block;
+}
+
+.Item--selected {
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Taken from https://clrs.cc/ */
+
+.Item--navy {
+  background-color: #001f3f;
+}
+
+.Item--blue {
+  background-color: #0074d9;
+}
+
+.Item--aqua {
+  background-color: #7fdbff;
+}
+
+.Item--teal {
+  background-color: #39cccc;
+}
+
+.Item--olive {
+  background-color: #3d9970;
+}
+
+.Item--green {
+  background-color: #2ecc40;
+}
+
+.Item--lime {
+  background-color: #01ff70;
+}
+
+.Item--yellow {
+  background-color: #ffdc00;
+}
+
+.Item--orange {
+  background-color: #ff851b;
+}
+
+.Item--red {
+  background-color: #ff4136;
+}
+
+.Item--maroon {
+  background-color: #85144b;
+}
+
+.Item--fuchsia {
+  background-color: #f012be;
+}
+
+.Item--purple {
+  background-color: #b10dc9;
+}
+
+.Item--black {
+  background-color: #111111;
+}
+
+.Item--gray {
+  background-color: #aaaaaa;
+}
+
+.Item--silver {
+  background-color: #dddddd;
+}
